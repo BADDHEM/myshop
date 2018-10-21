@@ -1,9 +1,15 @@
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from "./registration/register.component";
+import { SecureComponent } from "./secure/secure.component";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/home", pathMatch: "full" },
+    { path: "", redirectTo: "/secure", pathMatch: "full" },
+    { path: "secure", component: SecureComponent },
+    { path: "login", component:LoginComponent },
+    { path: "register", component: RegisterComponent },
     { path: "home", loadChildren: "~/app/home/home.module#HomeModule" },
     { path: "browse", loadChildren: "~/app/browse/browse.module#BrowseModule" },
     { path: "search", loadChildren: "~/app/search/search.module#SearchModule" },

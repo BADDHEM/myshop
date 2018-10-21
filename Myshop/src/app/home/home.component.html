@@ -1,0 +1,180 @@
+<ActionBar class="action-bar">
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label class="action-bar-title" text="MyShop"></Label>
+    <ActionItem (tap)="showDialog()" ios.systemIcon="9" ios.position="right"
+        android.systemIcon="ic_menu_login"></ActionItem>
+        
+</ActionBar>
+<TabView>
+        <StackLayout *tabItem="{title: 'Chai'}">
+                <GridLayout class="page page-content">
+                        <ScrollView class="page" xmlns:Card="nativescript-cardview">
+                        <StackLayout>
+                            <!-- On Android the card view plugin requires adding an external library
+                                therefore it can't be demoed on Playground. You will have to download this project
+                                and build it locally to try it on Android -->
+                            <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                <StackLayout class="card-layout">
+0.
+                                </StackLayout>
+                             </CardView>
+                             <StackLayout>
+                                    <TextField text=0  hint="Enter No.Of Cups" ></TextField>
+                            </StackLayout>
+                             <GridLayout height="60" verticalAlignment="bottom">
+                                    <GridLayout columns="*, *" height="60">
+                                       
+                                        <GridLayout col="0">
+                                                <Button class="btn btn-primary" width="170px" height="110px" text="SUB-" style="float:left;margin-right:350px;background-color:green;"></Button>
+                                        </GridLayout>
+                                        <GridLayout col="1">
+                                                <Button class="btn btn-primary" width="170px" height="110px" text="ADD+" style="float:right;margin-left:350px;background-color:green;"></Button>
+                                        </GridLayout>
+                                    
+                                    </GridLayout>
+                                
+                                </GridLayout>
+                                <StackLayout class="hr-light"></StackLayout>
+                            <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                <StackLayout class="card-layout">
+                                    <Label class="h2" text="JaiDurgamma"></Label>
+                                    <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                </StackLayout>
+                            </CardView>
+                            <StackLayout>
+                                    <TextField text=0  hint="Enter No.Of Cups" ></TextField>
+                            </StackLayout>
+                             <GridLayout height="60" verticalAlignment="bottom">
+                                    <GridLayout columns="*, *" height="60">
+                                       
+                                        <GridLayout col="0">
+                                                <Button class="btn btn-primary" width="170px" height="110px" text="SUB-" style="float:left;margin-right:350px;background-color:green;"></Button>
+                                        </GridLayout>
+                                        <GridLayout col="1">
+                                                <Button class="btn btn-primary" width="170px" height="110px" text="ADD+" style="float:right;margin-left:350px;background-color:green;"></Button>
+                                        </GridLayout>
+                                    
+                                    </GridLayout>
+                                
+                                </GridLayout>
+                                <StackLayout class="hr-light"></StackLayout>
+                            <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                <StackLayout class="card-layout">
+                                    <Label class="h2" text="JaiDurgamma"></Label>
+                                    <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                </StackLayout>
+                            </CardView>
+                            <StackLayout>
+                                    <TextField text=0  hint="Enter No.Of Cups" ></TextField>
+                            </StackLayout>
+                             <GridLayout height="60" verticalAlignment="bottom">
+                                    <GridLayout columns="*, *" height="60">
+                                       
+                                        <GridLayout col="0">
+                                                <Button class="btn btn-primary" width="170px" height="110px" text="SUB-" style="float:left;margin-right:350px;background-color:green;"></Button>
+                                        </GridLayout>
+                                        <GridLayout col="1">
+                                                <Button class="btn btn-primary" width="170px" height="110px" text="ADD+" style="float:right;margin-left:350px;background-color:green;"></Button>
+                                        </GridLayout>
+                                    
+                                    </GridLayout>
+                                
+                                </GridLayout>
+
+                    </StackLayout>
+                    </ScrollView>
+                    </GridLayout>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Coffee'}">
+                <GridLayout class="page page-content">
+                        <ScrollView class="page" xmlns:Card="nativescript-cardview">
+                        <StackLayout>
+                            <!-- On Android the card view plugin requires adding an external library
+                                therefore it can't be demoed on Playground. You will have to download this project
+                                and build it locally to try it on Android -->
+                            <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                <StackLayout class="card-layout">
+                                    <Label class="h2" text="JaiDurgamma"></Label>
+                                    <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                </StackLayout>
+                            </CardView>
+                            <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                <StackLayout class="card-layout">
+                                    <Label class="h2" text="JaiDurgamma"></Label>
+                                    <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                </StackLayout>
+                            </CardView>
+                            <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                <StackLayout class="card-layout">
+                                    <Label class="h2" text="JaiDurgamma"></Label>
+                                    <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                </StackLayout>
+                            </CardView>
+                            
+                    </StackLayout>
+                    </ScrollView>
+                    </GridLayout>
+        </StackLayout>
+        
+        <StackLayout *tabItem="{title: 'Snacks'}">
+                <GridLayout class="page page-content">
+                        <ScrollView class="page" xmlns:Card="nativescript-cardview"> 
+                        <StackLayout>
+                            <!-- On Android the card view plugin requires adding an external library
+                                therefore it can't be demoed on Playground. You will have to download this project
+                                and build it locally to try it on Android -->
+                            <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                <StackLayout class="card-layout">
+                                    <Label class="h2" text="JaiDurgamma"></Label>
+                                    <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                </StackLayout>
+                            </CardView>
+                            <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                <StackLayout class="card-layout">
+                                    <Label class="h2" text="JaiDurgamma"></Label>
+                                    <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                </StackLayout>
+                            </CardView>
+                            <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                <StackLayout class="card-layout">
+                                    <Label class="h2" text="JaiDurgamma"></Label>
+                                    <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                </StackLayout>
+                            </CardView>
+                            <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                    <StackLayout class="card-layout">
+                                        <Label class="h2" text="JaiDurgamma"></Label>
+                                        <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                    </StackLayout>
+                                </CardView>
+                                <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                        <StackLayout class="card-layout">
+                                            <Label class="h2" text="JaiDurgamma"></Label>
+                                            <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                        </StackLayout>
+                                    </CardView>
+                                    <CardView  class="card" elevation="40" radius="10" android:shadowRadius="3">
+                                            <StackLayout class="card-layout">
+                                                <Label class="h2" text="JaiDurgamma"></Label>
+                                                <Label class="body" textWrap="true" text="JaiDurgamma"></Label>
+                                            </StackLayout>
+                                        </CardView>
+                            
+                    </StackLayout>
+                    </ScrollView>
+                    </GridLayout>
+        </StackLayout>
+        
+</TabView>
